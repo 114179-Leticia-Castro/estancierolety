@@ -17,4 +17,8 @@ public enum Forma {
 
     //Atributos
     private final String forma;
+
+    Forma(String forma) {
+        this.forma = forma;
+    }
 }

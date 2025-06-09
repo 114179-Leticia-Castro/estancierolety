@@ -1,6 +1,6 @@
 package com.grupo8.Estanciero.models.enums;
 
-import lombok *;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
@@ -17,5 +17,9 @@ public enum Color {
     NEGRITA("\u001B[1m");
 
 private final String color;
+
+    Color(String color) {
+        this.color = color;
+    }
 
 }

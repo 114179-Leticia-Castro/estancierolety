@@ -39,6 +39,30 @@ public class Consola {
         return respuesta;
     }
 
+    private static int ValidarEntrada(String entrada, int min, int max) {
+        Scanner input = new Scanner(System.in);
+        int respuesta;
+
+        //Intenta convertir la entrada a un int, si es posible valida que este dentro del rango solicitado
+        try{
+            respuesta = Integer.parseInt(entrada);
+
+            //Valida que el numero este dentro del rango aceptado o envia un mensaje de error y pide ingresar un valor nuevamente
+            if (respuesta < min || respuesta > max) {
+                MostrarError("Ingrese un numero del " + min + " al " + max + ": ");
+                respuesta = ValidarEntrada(input.nextLine(), min, max);
+            }
+        }
+
+        //Si la entrada no es un numero informa del error y solicita ingresarla nuevamente
+        catch (Exception e){
+            MostrarError("La respuesta \"" + entrada + "\" no es aceptable. Ingrese un numero del " + min + " al " + max + ": ");
+            respuesta = ValidarEntrada(input.nextLine(), min, max);
+        }
+
+        //Si la entrada es correcta la devuelve como un numero entero
+        return respuesta;
+    }
 
 
 }
