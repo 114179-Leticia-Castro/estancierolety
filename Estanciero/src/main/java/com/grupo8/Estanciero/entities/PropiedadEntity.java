@@ -21,6 +21,9 @@ public class PropiedadEntity {
     @Enumerated(EnumType.STRING)
     private TipoPropiedad tipoPropiedad;
 
+    @Column(name = "propiedad")
+    private String propiedad;
+
     @Column(name = "precio")
     private Integer precio;
 

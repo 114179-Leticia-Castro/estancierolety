@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class Tablero {
-    private static Tablero partida;
+    private Tablero partida;
     private Jugador jugadorActual;
     private List<Jugador> jugadores;
     private List<Casilla> casillas;

@@ -30,7 +30,7 @@ public class JugadorGuardadoEntity {
     private Integer dinero;
 
     @Column(name = "posicion")
-    private String posicion;
+    private Integer posicion;
 
     @Column(name = "estado")
     @Enumerated(EnumType.STRING)
@@ -46,6 +46,10 @@ public class JugadorGuardadoEntity {
     @Column(name = "color")
     @Enumerated(EnumType.STRING)
     private Color color;
+
+    @ManyToOne
+    @JoinColumn(name = "id_partida_guardada")
+    private PartidaGuardadaEntity partidaGuardada;
 
 
 }

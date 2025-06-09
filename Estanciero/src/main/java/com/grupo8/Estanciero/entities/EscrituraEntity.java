@@ -1,5 +1,6 @@
 package com.grupo8.Estanciero.entities;
 
+import com.grupo8.Estanciero.models.enums.Zona;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -21,6 +22,7 @@ public class EscrituraEntity {
     private ProvinciaEntity provincia;
 
     @Column(name = "zona")
-    private String zona;
+    @Enumerated(EnumType.STRING)
+    private Zona zona;
 
 }
