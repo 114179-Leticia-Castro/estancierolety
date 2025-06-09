@@ -18,5 +18,6 @@ public class ProvinciaPrioritariaEntity {
     private ProvinciaEntity provincia;
 
     @Column(name = "tipo_jugador", nullable = false)
+    @Enumerated(EnumType.STRING)
     private TipoJugador tipoJugador;
 }

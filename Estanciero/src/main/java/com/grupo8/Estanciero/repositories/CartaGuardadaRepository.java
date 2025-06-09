@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface CartaGuardadaRepository extends JpaRepository<CartaGuardadaEntity, Integer> {
-    CartaGuardadaEntity findByCartaAndJugadorGuardadoAnd(CartaEntity carta, JugadorGuardadoEntity jugadorGuardado);
+    CartaGuardadaEntity findByCartaAndJugadorGuardado(CartaEntity carta, JugadorGuardadoEntity jugadorGuardado);
 }

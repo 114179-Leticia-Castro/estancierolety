@@ -12,6 +12,9 @@ public class AlquilerEntity {
     @Column(name = "id_alquiler")
     private Integer idAlquiler;
 
+    @ManyToOne
+    @JoinColumn(name = "id_propiedad", nullable = false)
+    private PropiedadEntity propiedad;
 
     @Column(name="alquiler_1")
     private Integer alquiler1;

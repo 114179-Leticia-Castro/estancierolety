@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AlquilerRepository extends JpaRepository<AlquilerEntity, Integer> {
-    AlquilerEntity findByPropiedadAndNivel(PropiedadEntity propiedad, Integer nivel);
+    AlquilerEntity findByPropiedad(PropiedadEntity propiedad);
 
 
 }

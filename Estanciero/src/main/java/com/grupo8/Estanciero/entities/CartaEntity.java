@@ -13,12 +13,12 @@ public class CartaEntity {
     @Column(name = "id_carta")
     private Integer idCarta;
 
-    @Column(name = "descripcion")
-    private String descripcion;
-
     @Column(name = "tipo_carta")
     @Enumerated(EnumType.STRING)
     private TipoCarta tipoCarta;
+
+    @Column(name = "descripcion")
+    private String descripcion;
 
     @Column(name = "valor")
     private Integer valor;

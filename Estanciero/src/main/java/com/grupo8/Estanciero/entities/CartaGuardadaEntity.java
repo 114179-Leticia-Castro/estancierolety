@@ -13,12 +13,14 @@ public class CartaGuardadaEntity {
     private Integer idCartaGuardada;
 
     @ManyToOne
+    @JoinColumn(name = "id_carta", nullable = false)
+    private CartaEntity carta;
+
+    @ManyToOne
     @JoinColumn(name = "id_jugador_guardado", nullable = false)
     private JugadorGuardadoEntity jugadorGuardado;
 
-    @ManyToOne
-    @JoinColumn(name = "id_carta", nullable = false)
-    private CartaEntity carta;
+
 
 
 }
